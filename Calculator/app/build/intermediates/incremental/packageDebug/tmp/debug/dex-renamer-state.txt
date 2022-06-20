@@ -1,4 +1,0 @@
-#Mon Jun 20 19:28:09 CST 2022
-base.0=D\:\\git repo\\Android_calculator\\Calculator\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
