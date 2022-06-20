@@ -4,12 +4,12 @@
         "source": "D:\\git repo\\Android_calculator\\Calculator\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\git repo\\Android_calculator\\Calculator\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_add_for_fab.png.flat",
-        "source": "D:\\git repo\\Android_calculator\\Calculator\\app\\src\\main\\res\\drawable-mdpi\\ic_add_for_fab.png"
-    },
-    {
         "merged": "D:\\git repo\\Android_calculator\\Calculator\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_main.xml.flat",
         "source": "D:\\git repo\\Android_calculator\\Calculator\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "D:\\git repo\\Android_calculator\\Calculator\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_add_for_fab.png.flat",
+        "source": "D:\\git repo\\Android_calculator\\Calculator\\app\\src\\main\\res\\drawable-mdpi\\ic_add_for_fab.png"
     },
     {
         "merged": "D:\\git repo\\Android_calculator\\Calculator\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",

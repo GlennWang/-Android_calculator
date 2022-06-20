@@ -27,18 +27,41 @@
     <string name="type_operand_two_hint">Type Operand 2</string>
 
     <!-- Button label for add operation -->
-    <string name="add_operation_text">Add</string>
+    <string name="add_operation_text">+</string>
 
     <!-- Button label for subtract operation -->
-    <string name="sub_operation_text">Sub</string>
+    <string name="sub_operation_text">-</string>
 
     <!-- Button label for divide operation -->
-    <string name="div_operation_text">Div</string>
+    <string name="div_operation_text">÷</string>
 
     <!-- Button label for mul operation -->
-    <string name="mul_operation_text">Mul</string>
+    <string name="mul_operation_text">×</string>
+
+    <string name="pow_operation_text">^</string>
+
+    <string name="clear_operation_text">C</string>
+
+    <string name="dot_operation_text">.</string>
+
+    <string name="percent_operation_text">%</string>
+
+    <string name="equal_operation_text">=</string>
 
     <!-- Message for textview in case of errors  -->
     <string name="computationError">Error</string>
-    <string name="pow_operation_text">POW</string>
+
+    <string name="brackets_operation_text">()</string>
+    <string name="one_number_text">1</string>
+    <string name="two_number_text">2</string>
+    <string name="three_number_text">3</string>
+    <string name="four_number_text">4</string>
+    <string name="five_number_text">5</string>
+    <string name="six_number_text">6</string>
+    <string name="seven_number_text">7</string>
+    <string name="eight_number_text">8</string>
+    <string name="nine_number_text">9</string>
+    <string name="zero_number_text">0</string>
+
+
 </resources>
