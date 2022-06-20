@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".BaseconvertCalculator"
+            android:exported="false"
+            android:label="BaseConvertCalculator"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.Calculator.MainActivity" />
+        </activity>
+        <activity
             android:name=".GeneralCalculator"
             android:exported="false"
             android:label="@string/GeneralCalculator"

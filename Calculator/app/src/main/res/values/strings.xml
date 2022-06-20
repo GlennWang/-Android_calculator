@@ -62,6 +62,10 @@
     <string name="eight_number_text">8</string>
     <string name="nine_number_text">9</string>
     <string name="zero_number_text">0</string>
+    <string name="base2">(2)</string>
+    <string name="base10">(10)</string>
+    <string name="base8">(8)</string>
+    <string name="base16">(16)</string>
 
 
 </resources>

@@ -70,7 +70,7 @@ public class WordListAdapter extends
                     view.getContext().startActivity(intent);
                     break;
                 case 1 :
-                    Intent intent2 = new Intent(view.getContext(), recipe.class);
+                    Intent intent2 = new Intent(view.getContext(), BaseconvertCalculator.class);
                     view.getContext().startActivity(intent2);
             }
 
