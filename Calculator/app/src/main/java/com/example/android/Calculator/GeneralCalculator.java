@@ -12,17 +12,7 @@ import android.widget.Button;
 import java.text.DecimalFormat;
 
 public class GeneralCalculator extends AppCompatActivity {
-    /**
-    private static final String TAG = "CalculatorActivity";
-
-    private Calculator mCalculator;
-
-    private EditText mOperandOneEditText;
-    private EditText mOperandTwoEditText;
-
-    private TextView mResultTextView;
-    */
-    private Button Number0,Number1,Number2,Number3,Number4,Number5,Number6,Number7,Number8,Number9,btnadd,btnsub,btnmul,btndiv,btnpow,btndot,btnc,btnequal;
+    private Button Number0,Number1,Number2,Number3,Number4,Number5,Number6,Number7,Number8,Number9,btnadd,btnsub,btnmul,btndiv,btnpow,btnper,btndot,btnc,btnequal;
     private TextView result;
     int Calculate_index = 0;
     String NUM1 = "0", NUM2 = "0";
@@ -33,35 +23,6 @@ public class GeneralCalculator extends AppCompatActivity {
         setContentView(R.layout.activity_general_calculator);
         SetCallFunction();
         SetOnClick();
-
-        /**
-        // Initialize the calculator class and all the views.
-        mCalculator = new Calculator();
-        mResultTextView = findViewById(R.id.operation_result_text_view);
-        mOperandOneEditText = findViewById(R.id.operand_one_edit_text);
-        mOperandTwoEditText = findViewById(R.id.operand_two_edit_text);
-         */
-    }
-
-    private void SetOnClick(){
-        Number0.setOnClickListener(OnClick);
-        Number1.setOnClickListener(OnClick);
-        Number2.setOnClickListener(OnClick);
-        Number3.setOnClickListener(OnClick);
-        Number4.setOnClickListener(OnClick);
-        Number5.setOnClickListener(OnClick);
-        Number6.setOnClickListener(OnClick);
-        Number7.setOnClickListener(OnClick);
-        Number8.setOnClickListener(OnClick);
-        Number9.setOnClickListener(OnClick);
-        btnadd.setOnClickListener(OnClick);
-        btnsub.setOnClickListener(OnClick);
-        btnmul.setOnClickListener(OnClick);
-        btndiv.setOnClickListener(OnClick);
-        btnpow.setOnClickListener(OnClick);
-        btndot.setOnClickListener(OnClick);
-        btnc.setOnClickListener(OnClick);
-        btnequal.setOnClickListener(OnClick);
     }
 
     private void SetCallFunction(){
@@ -80,11 +41,34 @@ public class GeneralCalculator extends AppCompatActivity {
         btnmul  = (Button) findViewById(R.id.operation_mul_btn);
         btndiv  = (Button) findViewById(R.id.operation_div_btn);
         btnpow  = (Button) findViewById(R.id.operation_pow_btn);
+        btnper  = (Button) findViewById(R.id.operation_percent_btn);
         btndot  = (Button) findViewById(R.id.operation_dot_btn);
         btnc    = (Button) findViewById(R.id.operation_clear_btn);
         btnequal= (Button) findViewById(R.id.operation_equal_btn);
         result  = (TextView) findViewById(R.id.operation_result_text_view);
         result.setText("");
+    }
+
+    private void SetOnClick(){
+        Number0.setOnClickListener(OnClick);
+        Number1.setOnClickListener(OnClick);
+        Number2.setOnClickListener(OnClick);
+        Number3.setOnClickListener(OnClick);
+        Number4.setOnClickListener(OnClick);
+        Number5.setOnClickListener(OnClick);
+        Number6.setOnClickListener(OnClick);
+        Number7.setOnClickListener(OnClick);
+        Number8.setOnClickListener(OnClick);
+        Number9.setOnClickListener(OnClick);
+        btnadd.setOnClickListener(OnClick);
+        btnsub.setOnClickListener(OnClick);
+        btnmul.setOnClickListener(OnClick);
+        btndiv.setOnClickListener(OnClick);
+        btnpow.setOnClickListener(OnClick);
+        btnper.setOnClickListener(OnClick);
+        btndot.setOnClickListener(OnClick);
+        btnc.setOnClickListener(OnClick);
+        btnequal.setOnClickListener(OnClick);
     }
 
     private Button.OnClickListener OnClick = new Button.OnClickListener()
@@ -110,6 +94,7 @@ public class GeneralCalculator extends AppCompatActivity {
                 case R.id.operation_mul_btn     :Calculate(2,Current_number);break;
                 case R.id.operation_div_btn     :Calculate(3,Current_number);break;
                 case R.id.operation_pow_btn     :Calculate(4,Current_number);break;
+                case R.id.operation_percent_btn :Calculate(5,Current_number);break;
                 case R.id.operation_dot_btn     :NumberDisplay(".");break;
                 case R.id.operation_clear_btn   :result.setText("");break;
                 case R.id.operation_equal_btn   :Calculate(10,Current_number);break;
@@ -161,7 +146,11 @@ public class GeneralCalculator extends AppCompatActivity {
                 Calculate_index = 4;
                 result.setText("");
                 break;
-
+            case 5:
+                Answer_index = Double.valueOf(number_calculations) / 100;
+                Answer = Double.toString(Answer_index);
+                result.setText(Answer);
+                break;
             case 10:
                 NUM2 = result.getText().toString();
                 double i = Double.valueOf(NUM1);
@@ -197,90 +186,4 @@ public class GeneralCalculator extends AppCompatActivity {
                 break;
         }
     }
-    /**
-
-    public void onAdd(View view) {
-        compute(Calculator.Operator.ADD);
-    }
-
-
-    public void onSub(View view) {
-        compute(Calculator.Operator.SUB);
-    }
-
-    public void onPow(View view) {
-        compute(Calculator.Operator.POW);
-    }
-
-
-    public void onDiv(View view) {
-        try {
-            compute(Calculator.Operator.DIV);
-        } catch (IllegalArgumentException iae) {
-            Log.e(TAG, "IllegalArgumentException", iae);
-            mResultTextView.setText(getString(R.string.computationError));
-        }
-    }
-
-
-    public void onMul(View view) {
-        compute(Calculator.Operator.MUL);
-    }
-
-    private void compute(Calculator.Operator operator) {
-        double operandOne;
-        double operandTwo;
-        try {
-            operandOne = getOperand(mOperandOneEditText);
-            operandTwo = getOperand(mOperandTwoEditText);
-        } catch (NumberFormatException nfe) {
-            Log.e(TAG, "NumberFormatException", nfe);
-            mResultTextView.setText(getString(R.string.computationError));
-            return;
-        }
-
-        String result;
-        switch (operator) {
-            case ADD:
-                result = String.valueOf(
-                        mCalculator.add(operandOne, operandTwo));
-                break;
-            case SUB:
-                result = String.valueOf(
-                        mCalculator.sub(operandOne, operandTwo));
-                break;
-            case DIV:
-                result = String.valueOf(
-                        mCalculator.div(operandOne, operandTwo));
-                break;
-            case MUL:
-                result = String.valueOf(
-                        mCalculator.mul(operandOne, operandTwo));
-                break;
-            case POW:
-                result = String.valueOf(
-                        mCalculator.pow(operandOne, operandTwo));
-                break;
-            default:
-                result = getString(R.string.computationError);
-                break;
-        }
-        mResultTextView.setText(result);
-    }
-
-
-    private static Double getOperand(EditText operandEditText) {
-        String operandText = getOperandText(operandEditText);
-        return Double.valueOf(operandText);
-    }
-
-
-    private static String getOperandText(EditText operandEditText) {
-        String operandText = operandEditText.getText().toString();
-        if (TextUtils.isEmpty(operandText)) {
-            throw new NumberFormatException("Operand cannot be empty!");
-        }
-        return operandText;
-    }
-     */
 }

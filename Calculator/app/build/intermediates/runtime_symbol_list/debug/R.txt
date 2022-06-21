@@ -859,7 +859,6 @@ int id icon 0x7f08004f
 int id icon_group 0x7f080050
 int id ifRoom 0x7f080051
 int id image 0x7f080052
-int id imageView3 0x7f080053
 int id info 0x7f080054
 int id italic 0x7f080055
 int id item_touch_helper_previous_elevation 0x7f080056
@@ -962,7 +961,6 @@ int id text 0x7f0800b6
 int id text2 0x7f0800b7
 int id textSpacerNoButtons 0x7f0800b8
 int id textSpacerNoTitle 0x7f0800b9
-int id textView3 0x7f0800ba
 int id text_input_password_toggle 0x7f0800bb
 int id textinput_counter 0x7f0800bc
 int id textinput_error 0x7f0800bd
@@ -1033,7 +1031,6 @@ int layout abc_select_dialog_material 0x7f0a001a
 int layout activity_baseconvert_calculator 0x7f0a001b
 int layout activity_general_calculator 0x7f0a001c
 int layout activity_main 0x7f0a001d
-int layout activity_recipe 0x7f0a001e
 int layout content_main 0x7f0a001f
 int layout design_bottom_navigation_item 0x7f0a0020
 int layout design_bottom_sheet_dialog 0x7f0a0021

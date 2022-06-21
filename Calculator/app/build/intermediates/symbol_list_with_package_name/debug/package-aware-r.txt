@@ -860,7 +860,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView3
 id info
 id italic
 id item_touch_helper_previous_elevation
@@ -963,7 +962,6 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
-id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1034,7 +1032,6 @@ layout abc_select_dialog_material
 layout activity_baseconvert_calculator
 layout activity_general_calculator
 layout activity_main
-layout activity_recipe
 layout content_main
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
